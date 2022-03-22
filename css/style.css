@@ -1,0 +1,69 @@
+:root{
+    --main-background: #202020;
+}
+
+@font-face {
+    font-family: 'Hey comic';
+    src: url(../fonts/Hey\ Comic.ttf);
+  }
+
+/* CAROUSEL */
+
+#introCarousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item.active {
+    height: 100vh;
+}
+
+.carousel-item:nth-child(1) {
+    background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, .9), rgba(0, 0, 0, 0.3)), url(../img/b1.jpg) center center/cover no-repeat;
+    filter: saturate(140%);
+}
+
+.carousel-item:nth-child(2) {
+    background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, .9), rgba(0, 0, 0, .3)), url(../img/b2.jpg) center center/cover no-repeat;
+    filter: saturate(120%);
+}
+
+.carousel-item:nth-child(3) {
+    background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, .9), rgba(0, 0, 0, .3)), url(../img/b3.jpg) center center/cover no-repeat;
+    filter: saturate(120%);
+}
+
+.navbar .nav-link {
+    color: #fff !important;
+}
+
+/* NAVBAR */
+
+.navbar {
+    z-index: 1000;
+    background: var(--main-background);
+}
+
+/* HEADER */
+
+header {
+    background: var(--main-background);
+}
+
+/* TEXT MAIN */
+
+.text-main {
+    position: absolute;
+    top: 50%;
+    width: 60%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(-50%); 
+    z-index: 1000;
+}
+
+.title {
+    color: orange;
+    font-size: 5rem;
+    font-weight: bolder;
+    font-family: 'Hey comic';
+}
