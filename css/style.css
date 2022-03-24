@@ -1,5 +1,8 @@
 :root{
     --main-background: #202020;
+    --main-grey: #929292;
+    --main-white: #fff;
+    --main-orange: rgb(255, 166, 0);
 }
 
 @font-face {
@@ -31,15 +34,41 @@
     filter: saturate(120%);
 }
 
-.navbar .nav-link {
-    color: #fff !important;
-}
-
 /* NAVBAR */
+
+.navbar .nav-link {
+    color: var(--main-white);
+}
 
 .navbar {
     z-index: 1000;
     background: var(--main-background);
+    padding: .3rem 0 .3rem 0;
+}
+
+.navbrand {
+    font-family: 'Hey comic', var(--mdb-font-roboto);
+    font-size: 1.6rem;
+    font-weight: 200;
+}
+
+header ul li {
+    font-size: 1.3rem;
+    letter-spacing: 1.4px;    
+    font-weight: 500;
+}
+
+header ul li:hover {
+    background: var(--main-white);    
+    border-radius: 5px;
+}
+
+.asdf:hover {
+    color: var(--main-background);
+}
+
+.fa-bars {
+    color: var(--main-white);
 }
 
 /* HEADER */
@@ -58,12 +87,103 @@ header {
     right: 0;
     margin: auto;
     transform: translateY(-50%); 
-    z-index: 1000;
+    z-index: 100;
 }
 
-.title {
-    color: orange;
+.title-span {
+    color: var(--main-orange);
     font-size: 5rem;
     font-weight: bolder;
     font-family: 'Hey comic';
+}
+
+/* BTN */
+
+.btn:hover {
+    background: var(--main-white);
+    color: var(--main-background);
+}
+
+.btn-2:hover {
+    background: var(--main-background);
+    color: var(--main-white);
+}
+
+.btn-2 {
+    margin-bottom: 2rem;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--main-background);
+    color: var(--main-white);  
+  }
+  
+  footer .container {
+    padding: 1rem 0 0 0;
+  }
+  
+  footer a {
+    color: var(--main-orange);
+  }
+  
+  footer a:hover {
+    color: #eeb35b
+  }  
+  
+  footer ul li a {
+    color: var(--main-grey);
+    cursor: pointer;
+    margin: 0 1.5rem 0 1.5rem;
+    
+  }
+  
+  footer ul li a:hover {
+    color: var(--main-white)
+  }
+
+  .navbar-nav {
+      justify-content: center;
+  }
+
+
+/* COMICS SECTION */
+
+.main-container {
+    padding: 0;
+}
+
+.comics-title {
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+    padding-left: 1rem;
+}
+
+h5 {
+    font-size: .95rem;
+    margin: 1.4rem 0 .6rem 0;
+}
+
+/* media querys */
+
+@media (max-width: 992px) {
+    header ul li {
+        padding-left: 1rem;
+    }
+    .title-span {
+        font-size: 4rem;
+    }
+    .title {
+        font-size: 1.7rem;
+    }
+    footer div {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .container {
+        padding: 0 20px 0 20px;
+    }
 }
