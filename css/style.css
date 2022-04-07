@@ -4,6 +4,7 @@
     --main-white: #fff;
     --main-orange: rgb(255, 166, 0);
     --main-red: rgb(218, 33, 33);
+    --main-red2: #ba0101;
     --main-green: rgb(5, 139, 0);
 }
 
@@ -201,6 +202,33 @@ h5 {
     margin-top: 0;
 }
 
+/* CONTACT SECTION */
+
+.main-contact {    
+    height: 90vh;
+}
+
+.footer-newsletter {
+    height: 10vh;
+    padding: 15px 0;
+    background-color: var(--main-red2);
+    color: var(--main-white);
+}
+
+.footer-newsletter h4,
+.footer-newsletter p {
+    margin-bottom: 0;
+    padding-left: 1rem;
+}
+
+.space {
+    height: 220px;
+}
+
+#form5Example29 {
+    width: fill; /* revisar esto */
+}
+
 /* media querys */
 
 @media (max-width: 992px) {
@@ -215,6 +243,15 @@ h5 {
     }
     footer div {
         font-size: .9rem;
+    }
+    .space {
+        height: 85px;
+    }
+    .main-contact {    
+        height: auto;
+    }
+    .footer-newsletter {
+        height: 130px;
     }
 }
 

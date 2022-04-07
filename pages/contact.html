@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -17,6 +18,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <!--Main Navigation-->
     <header>
@@ -50,12 +52,95 @@
                 </div>
             </div>
         </nav>
-        <!-- Navbar -->        
+        <!-- Navbar -->
     </header>
+    <main class="asdf">
+        <div class="container main-contact">
+            <div class="space"></div>
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-6">
+                    <h2>Contact us</h2>
+                    <form>
+                        <!-- Name input -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="form4Example1" class="form-control" required />
+                            <label class="form-label" for="form4Example1">Name</label>
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="form4Example2" class="form-control" required />
+                            <label class="form-label" for="form4Example2">Email address</label>
+                        </div>
+
+                        <!-- Message input -->
+                        <div class="form-outline mb-4">
+                            <textarea class="form-control" id="form4Example3" rows="4" required></textarea>
+                            <label class="form-label" for="form4Example3">Message</label>
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="form-check mb-4">
+                            <input class="form-check-input me-2" type="checkbox" value="" id="form4Example4" required />
+                            <label class="form-check-label" for="form4Example4">
+                                I have read and accept the privacy policy
+                            </label>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary mb-4">Send</button>
+                    </form>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <h2>Contact data</h2>
+                    <div class="col-md-12">
+                        <h3>Comic Store</h3>
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i><strong>Adress</strong>
+                        </div>
+                        <p>Paseo de los Tilos 30 29006 Málaga España</p>
+                        <div>
+                            <i class="fa fa-phone"></i><strong>Phone</strong>
+                        </div>
+                        <p>(0341) 153123456</p>
+                        <div>
+                            <i class="fa fa-envelope"></i><strong>Email</strong>
+                        </div>
+                        <p>comicstore@comics.com</p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
     <!--Main Navigation-->
 
     <!-- footer -->
-    <footer class="text-center text-lg-start align-items-center justify-content-center">
+    <div class="footer-newsletter">
+        <div class="container">                
+            <div class="row flex-row justify-content-center align-items-center">
+                <!-- footer columns -->
+                <div class="col-md-12 col-lg-6 d-flex">
+                    <i class="fas fa-envelope fa-3x"></i>
+                    <div>
+                        <h4>Newsletter</h4>
+                        <p>Subscribe and you will be aware of our news</p>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6 col-12">
+                    <!-- Email input -->
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <input type="email" id="form5Example29" class="form-control col-12" placeholder="Email"/>
+                        <label class="form-label" for="form5Example29"></label>
+                        <button type="button" class="btn btn-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center text-lg-start align-items-center justify-content-center">        
         <div class="text-center p-3">
             Website designed & developed by
             <a href="https://www.linkedin.com/in/alexis-leandro-santa-ana-9176b622b/" target="_blank">Alexis Santa
@@ -68,4 +153,5 @@
     <!-- Custom scripts -->
     <script type="text/javascript" src="../js/script.js"></script>
 </body>
+
 </html>
