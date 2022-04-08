@@ -1,17 +1,20 @@
-:root{
+:root {
     --main-background: #202020;
     --main-grey: #929292;
+    --main-darkgrey: #5b5959;
     --main-white: #fff;
+    --main-darkwhite: rgb(195, 195, 195);
     --main-orange: rgb(255, 166, 0);
     --main-red: rgb(218, 33, 33);
     --main-red2: #ba0101;
     --main-green: rgb(5, 139, 0);
+    --main-blue: #183afa;
 }
 
 @font-face {
     font-family: 'Hey comic';
     src: url(../fonts/Hey\ Comic.ttf);
-  }
+}
 
 /* CAROUSEL */
 
@@ -57,12 +60,12 @@
 
 header ul li {
     font-size: 1.3rem;
-    letter-spacing: 1.4px;    
+    letter-spacing: 1.4px;
     font-weight: 500;
 }
 
 header ul li:hover {
-    background: var(--main-white);    
+    background: var(--main-white);
     border-radius: 5px;
 }
 
@@ -89,7 +92,7 @@ header {
     left: 0;
     right: 0;
     margin: auto;
-    transform: translateY(-50%); 
+    transform: translateY(-50%);
     z-index: 100;
 }
 
@@ -123,42 +126,47 @@ header {
 
 .btn-4:hover {
     background: var(--main-green);
-    color: var(--main-white);        
+    color: var(--main-white);
+}
+
+.btn-5:hover {
+    background: var(--main-blue);
+    color: var(--main-white);
 }
 
 /* FOOTER */
 
 footer {
     background: var(--main-background);
-    color: var(--main-white);  
-  }
-  
-  footer .container {
+    color: var(--main-white);
+}
+
+footer .container {
     padding: 1rem 0 0 0;
-  }
-  
-  footer a {
+}
+
+footer a {
     color: var(--main-orange);
-  }
-  
-  footer a:hover {
+}
+
+footer a:hover {
     color: #eeb35b
-  }  
-  
-  footer ul li a {
+}
+
+footer ul li a {
     color: var(--main-grey);
     cursor: pointer;
     margin: 0 1.5rem 0 1.5rem;
-    
-  }
-  
-  footer ul li a:hover {
-    color: var(--main-white)
-  }
 
-  .navbar-nav {
-      justify-content: center;
-  }
+}
+
+footer ul li a:hover {
+    color: var(--main-white)
+}
+
+.navbar-nav {
+    justify-content: center;
+}
 
 
 /* COMICS SECTION */
@@ -178,7 +186,7 @@ h5 {
     margin: 1.4rem 0 .6rem 0;
 }
 
-.comic {    
+.comic {
     cursor: pointer;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     transition: all .1s ease-in-out;
@@ -204,8 +212,28 @@ h5 {
 
 /* CONTACT SECTION */
 
-.main-contact {    
+.main-contact {
     height: 90vh;
+    color: var(--main-background)
+}
+
+.main-contact p {
+    color: var(--main-darkgrey);
+    margin-left: 1.3rem;
+}
+
+.main-contact h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+}
+
+.main-contact h4 {
+    font-family: sans-serif;
+    ;
+}
+
+.main-contact i {
+    margin-right: .5rem;
 }
 
 .footer-newsletter {
@@ -213,6 +241,8 @@ h5 {
     padding: 15px 0;
     background-color: var(--main-red2);
     color: var(--main-white);
+    align-items: center;
+    display: flex;
 }
 
 .footer-newsletter h4,
@@ -221,12 +251,48 @@ h5 {
     padding-left: 1rem;
 }
 
+.footer-newsletter p {
+    color: var(--main-darkwhite);
+}
+
 .space {
     height: 220px;
 }
 
-#form5Example29 {
-    width: fill; /* revisar esto */
+/* border inputs*/
+
+.form-outline .form-control:focus~.form-notch .form-notch-leading {
+    border-top: .125rem solid var(--main-background);
+    border-bottom: .125rem solid var(--main-background);
+    border-left: .125rem solid var(--main-background);
+}
+
+.form-outline .form-control:focus~.form-notch .form-notch-middle {
+    border-bottom: .125rem solid;
+    border-color: var(--main-background);
+}
+
+.form-outline .form-control:focus~.form-notch .form-notch-trailing {
+    border-color: currentcolor currentcolor currentcolor var(--main-background);
+    border-bottom: .125rem solid var(--main-background);
+    border-right: .125rem solid var(--main-background);
+    border-top: .125rem solid var(--main-background);
+}
+
+.form-outline .form-control:focus~.form-label {
+    color: var(--main-background);
+}
+
+
+/* checkbox color */
+.form-check-input:focus {
+    border-color: var(--main-darkgrey) !important;
+    outline: 0;
+}
+
+.form-check-input:checked {
+    background-color: var(--main-background) !important;
+    border-color: var(--main-background) !important;
 }
 
 /* media querys */
@@ -235,24 +301,52 @@ h5 {
     header ul li {
         padding-left: 1rem;
     }
+
     .title-span {
         font-size: 4rem;
     }
+
     .title {
         font-size: 1.7rem;
     }
+
     footer div {
         font-size: .9rem;
     }
+
     .space {
         height: 85px;
     }
-    .main-contact {    
+
+    .main-contact {
         height: auto;
     }
+
     .footer-newsletter {
         height: 130px;
     }
+
+    .footer-newsletter i {
+        display: none;
+    }
+
+    .footer-newsletter h4,
+    .footer-newsletter p,
+    .row-center {
+        padding-left: 0;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .main-contact {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .footer-newsletter p {
+        margin: .3rem 0 .3rem
+    }
+
 }
 
 @media (max-width: 575px) {
