@@ -103,6 +103,12 @@ header {
     font-family: 'Hey comic';
 }
 
+.randomMessage {
+    padding: .5rem 0 0 .5rem; 
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
 /* BTN */
 
 .btn:hover {
