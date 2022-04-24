@@ -59,8 +59,25 @@
     <main>
         <div class="container main-container">
             <h2 class="comics-title">COMICS ON SALE</h2>
-            <div class="row row-cols-2 row-cols-lg-5 g-3 g-lg-3">
+            <div class="row row-cols-2 row-cols-lg-5 g-3 g-lg-3 mb-5" id="items">
+
+            </div>
+
+            <!-- Templates -->
+            <template id="template-card">
                 <div class="col-sm-4">
+                    <img src="" class="img-fluid comic" alt="" data-mdb-toggle="modal" data-mdb-target="">
+                    <h5></h5>
+                    <p></p>
+                    <button class="btn btn-2 btn-outline-dark" href="#" role="button" data-id="">ADD TO CART</button>
+                </div>
+            </template>
+
+            <template id="template-modals">
+
+            </template>
+
+            <!-- <div class="col-sm-4">
                     <img src="../img/comics/sp1.jpg" class="img-fluid comic" alt="" data-mdb-toggle="modal"
                         data-mdb-target="#modal-1">
                     <h5>Devil's Reign: Spider-Man (2022) #1</h5>
@@ -216,8 +233,8 @@
                         data-mdb-target="#modal-25" alt="">
                     <h5>The Flash Vol. 1: Lightning Strikes Twice</h5>
                     <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-            </div>
+                </div> -->
+
     </main>
 
     <!-- footer -->
@@ -931,7 +948,8 @@
     <!-- MDB -->
     <script type="text/javascript" src="../js/mdb.min.js"></script>
     <!-- Custom scripts -->
-    <script src="../js/comics.js"></script>
+    <script src="../js/cart.js"></script>
+    <!-- <script src="../js/comics.js"></script> Entregable Eventos -->
     <!-- <script type="text/javascript" src="../js/script.js"></script> -->
 </body>
 

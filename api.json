@@ -1,0 +1,177 @@
+[
+    {
+        "price": 70,
+        "id": 1,
+        "title": "Devil's Reign: Spider-Man (2022) #1",
+        "thumbnailUrl": "../img/comics/sp1.jpg",
+        "modal": "#modal-1"
+    },
+    {
+        "price": 100,
+        "id": 2,
+        "title": "Amazing Spider-Man by Nick Spencer Vol. 15: What Cost Victory?",
+        "thumbnailUrl": "../img/comics/sp2.jpg",
+        "modal": "#modal-2"
+    },
+    {
+        "price": 120,
+        "id": 3,
+        "title": "Spider-Man: Bloodline",
+        "thumbnailUrl": "../img/comics/sp3.jpg",
+        "modal": "#modal-3"
+    },
+    {
+        "price": 80,
+        "id": 4,
+        "title": "Spider-Man by Todd Mcfarlane: The Complete Collection",
+        "thumbnailUrl": "../img/comics/sp4.jpg",
+        "modal": "#modal-4"
+    },
+    {
+        "price": 90,
+        "id": 5,
+        "title": "The Amazing Spider-Man (2018) #80",
+        "thumbnailUrl": "../img/comics/sp5.jpg",
+        "modal": "#modal-5"
+    },
+    {
+        "price": 150,
+        "id": 6,
+        "title": "Daredevil (2019) #33",
+        "thumbnailUrl": "../img/comics/d1.jpg",
+        "modal": "#modal-6"
+    },
+    {
+        "price": 110,
+        "id": 7,
+        "title": "Daredevil (2019) #36",
+        "thumbnailUrl": "../img/comics/d2.jpg",
+        "modal": "#modal-7"
+    },
+    {
+        "price": 90,
+        "id": 8,
+        "title": "Daredevil (2019) #23",
+        "thumbnailUrl": "../img/comics/d3.jpg",
+        "modal": "#modal-8"
+    },
+    {
+        "price": 80,
+        "id": 9,
+        "title": "Man Without Fear (2019) #3",
+        "thumbnailUrl": "../img/comics/d4.jpg",
+        "modal": "#modal-9"
+    },
+    {
+        "price": 60,
+        "id": 10,
+        "title": "Daredevil (2019) #1",
+        "thumbnailUrl": "../img/comics/d5.jpg",
+        "modal": "#modal-10"
+    },
+    {
+        "price": 130,
+        "id": 11,
+        "title": "Iron Man Annual (2021) #1",
+        "thumbnailUrl": "../img/comics/im1.jpg",
+        "modal": "#modal-11"
+    },
+    {
+        "price": 140,
+        "id": 12,
+        "title": "Tony Stark: Iron Man (2018) #15",
+        "thumbnailUrl": "../img/comics/im2.jpg",
+        "modal": "#modal-12"
+    },
+    {
+        "price": 150,
+        "id": 13,
+        "title": "Tony Stark: Iron Man (2018) #13",
+        "thumbnailUrl": "../img/comics/im3.jpg",
+        "modal": "#modal-13"
+    },
+    {
+        "price": 90,
+        "id": 14,
+        "title": "Tony Stark: Iron Man (2018) #2",
+        "thumbnailUrl": "../img/comics/im4.jpg",
+        "modal": "#modal-14"
+    },
+    {
+        "price": 100,
+        "id": 15,
+        "title": "Iron Man (2020) #14",
+        "thumbnailUrl": "../img/comics/im5.jpg",
+        "modal": "#modal-15"
+    },
+    {
+        "price": 120,
+        "id": 16,
+        "title": "Batman: The Killing Joke - The Deluxe Edition",
+        "thumbnailUrl": "../img/comics/bm1.jpg",
+        "modal": "#modal-16"
+    },
+    {
+        "price": 110,
+        "id": 17,
+        "title": "Batman: Earth One",
+        "thumbnailUrl": "../img/comics/bm2.jpg",
+        "modal": "#modal-17"
+    },
+    {
+        "price": 100,
+        "id": 18,
+        "title": "Batman: Hush (Dc Essential Edition)",
+        "thumbnailUrl": "../img/comics/bm3.jpg",
+        "modal": "#modal-18"
+    },
+    {
+        "price": 170,
+        "id": 19,
+        "title": "The Dark Knight Returns 30th Anniversary Edition",
+        "thumbnailUrl": "../img/comics/bm4.jpg",
+        "modal": "#modal-19"
+    },
+    {
+        "price": 200,
+        "id": 20,
+        "title": "Batman: The Court Of Owls Saga: (Dc Essential Edition)",
+        "thumbnailUrl": "../img/comics/bm5.jpg",
+        "modal": "#modal-20"
+    },
+    {
+        "price": 140,
+        "id": 21,
+        "title": "Flashpoint",
+        "thumbnailUrl": "../img/comics/f1.jpg",
+        "modal": "#modal-21"
+    },
+    {
+        "price": 80,
+        "id": 22,
+        "title": "The Flash: Rebirth",
+        "thumbnailUrl": "../img/comics/f2.jpg",
+        "modal": "#modal-22"
+    },
+    {
+        "price": 90,
+        "id": 23,
+        "title": "The Flash: Starting Line (Dc Essential Edition)",
+        "thumbnailUrl": "../img/comics/f3.jpg",
+        "modal": "#modal-23"
+    },
+    {
+        "price": 110,
+        "id": 24,
+        "title": "The Flash Vol. 2: Speed Of Darkness",
+        "thumbnailUrl": "../img/comics/f4.jpg",
+        "modal": "#modal-24"
+    },
+    {
+        "price": 90,
+        "id": 25,
+        "title": "The Flash Vol. 1: Lightning Strikes Twice",
+        "thumbnailUrl": "../img/comics/f5.jpg",
+        "modal": "#modal-25"
+    }
+]

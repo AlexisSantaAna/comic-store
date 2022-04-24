@@ -104,7 +104,7 @@ header {
 }
 
 .randomMessage {
-    padding: .5rem 0 0 .5rem; 
+    padding: .5rem 0 0 .5rem;
     font-size: 1.1rem;
     font-style: italic;
 }
@@ -299,6 +299,18 @@ h5 {
 .form-check-input:checked {
     background-color: var(--main-background) !important;
     border-color: var(--main-background) !important;
+}
+
+/* CART SECTION */
+
+.main-cart {
+    height: 100vh;
+}
+
+.cart-title {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    padding-left: 1rem;
 }
 
 /* media querys */
