@@ -63,178 +63,88 @@
 
             </div>
 
+            <!-- cart -->
+            <div class="container main-container main-cart">
+                <h2 class="cart-title">SHOPPING CART</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Item</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Action</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products"></tbody>
+                    <tfoot>
+                        <tr id="footer">
+                            <th scope="row" colspan="5">Empty cart - Get some comics!</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
             <!-- Templates -->
             <template id="template-card">
                 <div class="col-sm-4">
                     <img src="" class="img-fluid comic" alt="" data-mdb-toggle="modal" data-mdb-target="">
                     <h5></h5>
-                    <p></p>
-                    <button class="btn btn-2 btn-outline-dark" href="#" role="button" data-id="">ADD TO CART</button>
+                    <p>$<span></span></p>
+                    <button class="btn btn-2 btn-outline-dark" role="button" data-id="">ADD TO CART</button>
                 </div>
             </template>
 
             <template id="template-modals">
-
+                <div class="modal fade" id="" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="text-center">
+                                    <img src="" class="img-fluid  text-center" alt="">
+                                </div>
+                                <p class="modal-text"></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </template>
 
-            <!-- <div class="col-sm-4">
-                    <img src="../img/comics/sp1.jpg" class="img-fluid comic" alt="" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-1">
-                    <h5>Devil's Reign: Spider-Man (2022) #1</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/sp2.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-2" alt="">
-                    <h5>Amazing Spider-Man by Nick Spencer Vol. 15: What Cost Victory?
-                    </h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/sp3.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-3" alt="">
-                    <h5>Spider-Man: Bloodline</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/sp4.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-4" alt="">
-                    <h5>Spider-Man by Todd Mcfarlane: The Complete Collection</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/sp5.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-5" alt="">
-                    <h5>The Amazing Spider-Man (2018) #80</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-
-                <div class="col-sm-4">
-                    <img src="../img/comics/d1.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-6" alt="">
-                    <h5>Daredevil (2019) #33</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/d2.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-7" alt="">
-                    <h5>Daredevil (2019) #36</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/d3.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-8" alt="">
-                    <h5>Daredevil (2019) #23</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/d4.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-9" alt="">
-                    <h5>Man Without Fear (2019) #3</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/d5.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-10" alt="">
-                    <h5>Daredevil (2019) #1</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-
-
-                <div class="col-sm-4">
-                    <img src="../img/comics/im1.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-11" alt="">
-                    <h5>Iron Man Annual (2021) #1</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/im2.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-12" alt="">
-                    <h5>Tony Stark: Iron Man (2018) #15</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/im3.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-13" alt="">
-                    <h5>Tony Stark: Iron Man (2018) #13</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/im4.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-14" alt="">
-                    <h5>Tony Stark: Iron Man (2018) #2</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/im5.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-15" alt="">
-                    <h5>Iron Man (2020) #14</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-
-
-                <div class="col-sm-4">
-                    <img src="../img/comics/bm1.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-16" alt="">
-                    <h5>Batman: The Killing Joke - The Deluxe Edition</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/bm2.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-17" alt="">
-                    <h5>Batman: Earth One</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/bm3.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-18" alt="">
-                    <h5>Batman: Hush (Dc Essential Edition)</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/bm4.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-19" alt="">
-                    <h5>The Dark Knight Returns 30th Anniversary Edition</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/bm5.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-20" alt="">
-                    <h5>Batman: The Court Of Owls Saga: (Dc Essential Edition)</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-
-                <div class="col-sm-4">
-                    <img src="../img/comics/f1.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-21" alt="">
-                    <h5>Flashpoint</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/f2.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-22" alt="">
-                    <h5>The Flash: Rebirth</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/f3.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-23" alt="">
-                    <h5>The Flash: Starting Line (Dc Essential Edition)</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/f4.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-24" alt="">
-                    <h5>The Flash Vol. 2: Speed Of Darkness</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/comics/f5.jpg" class="img-fluid comic" data-mdb-toggle="modal"
-                        data-mdb-target="#modal-25" alt="">
-                    <h5>The Flash Vol. 1: Lightning Strikes Twice</h5>
-                    <a class="btn btn-2 btn-outline-dark" href="#" role="button">ADD TO CART</a>
-                </div> -->
-
+            <template id="template-footer">
+                <th scope="row" colspan="2">Total products</th>
+                <td>10</td>
+                <td>
+                    <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                        Clean
+                    </button>
+                </td>
+                <td class="font-weight-bold">$ <span>5000</span></td>
+            </template>
+    
+            <template id="template-carrito">
+                <tr>
+                    <th scope="row">id</th>
+                    <td>Café</td>
+                    <td>1</td>
+                    <td>
+                        <button class="btn btn-info btn-sm">
+                            Add
+                        </button>
+                        <button class="btn btn-danger btn-sm">
+                            Delete
+                        </button>
+                    </td>
+                    <td>$ <span>500</span></td>
+                </tr>
+            </template>
     </main>
 
     <!-- footer -->
@@ -250,699 +160,7 @@
 
     <!-- Modal -->
     <div id="all-modals">
-        <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Devil's Reign: Spider-Man (2022) #1</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/sp1.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">The events of DEVIL'S REIGN #1-2 have put Spidey in an awful position. As
-                            if
-                            that weren't enough,
-                            the newly returned ROSE has Spidey in his crosshairs and wants to prove that he's badder
-                            than
-                            his dad, Kingin, ever was.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Amazing Spider-Man by Nick Spencer Vol. 15: What
-                            Cost Victory?</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/sp2.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">Collects Amazing Spider-Man (2018) #70-74. Nick Spencer's Spider-Man saga
-                            reaches new heights! The Sinister War between Doctor Octopus and the Vulture is about to
-                            turn Spider-Man's life upside down! And the fact that "King's Ransom" and "Chameleon
-                            Conspiracy" already did that twice over might give you an idea of just how hard this latest
-                            crisis is going to be for the wall-crawler! But as two of the deadliest teams of villains
-                            ever to exist go to all-out war with both Spidey and each other, what is Kindred's role in
-                            the chaos - and what is his horrific endgame? There's simply no way of describing how
-                            intense and impossible this situation is for Peter Parker!</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Spider-Man: Bloodline</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/sp3.jpg" class="img-fluid text-center" alt="">
-                        </div>
-                        <p class="modal-text">Collects Spider-Man (2019) #1-5. J.J. Abrams, his son Henry Abrams and
-                            superstar artist Sara Pichelli spin a Spidey story unlike any other! When the horrific
-                            villain Cadaverous takes a huge bite out of Spider-Man’s life, what will it mean for Peter
-                            Parker’s family? What will it mean for…his son?! Years after a terrible tragedy, teenage Ben
-                            Parker is facing his own share of high school drama, from standing up to a bully to meeting
-                            the love of his life. But now Ben is about to find out that his dad was Spider-Man — and
-                            that the fiend who changed everything for their family is back…and out to get him! The
-                            Hollywood visionary who has left his indelible mark on the galaxies of both Star Wars and
-                            Star Trek revisits Spider-Man’s old adage about power and responsibility in a thrilling new
-                            way!</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">The Amazing Spider-Man (2018) #80</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/sp4.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">With her nephew at death’s door, May Parker is not just going to sit
-                            around accepting that Peter’s ailments aren’t solvable with conventional means. Aunt May is
-                            going to seek UNCONVENTIONAL MEANS by way of her ex-fiancé DOCTOR OCTOPUS!!! One of the most
-                            controversial couples in comics history is back together, and they’re Peter Parker’s only
-                            hope of living through BEYOND!</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Spider-Man by Todd Mcfarlane: The Complete
-                            Collection</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/sp5.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">
-                            Collects Spider-Man (1990) #1-14, 16; X-Force (1991) #4. The book that transformed comics!
-                            Todd McFarlane became a superstar illustrating AMAZING SPIDER-MAN, but he changed the
-                            industry forever with his next project: the “adjectiveless” SPIDER-MAN! Taking on both
-                            writing and art duties, McFarlane ushered Peter Parker into a gritty new era — and it began
-                            with “Torment”! When the Big Apple’s streets run red with blood, the web-slinger heads into
-                            the sewers to stop the Lizard’s homicidal rampage. But what is driving his old friend and
-                            foe? Plus: Ghost Rider lends a bony hand when the deranged Hobgoblin returns, the
-                            wall-crawler finds himself at the center of a clash of claws between Wolverine and Wendigo
-                            and Pete goes back in black to face Morbius the Living Vampire! And in the ultimate nineties
-                            team-up, Spidey joins X-Force to battle the unstoppable Juggernaut!</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Daredevil (2019) #33</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/d1.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">LOCKDOWN CONTINUES! Elektra faces her greatest challenge as DAREDEVIL yet,
-                            as a serial killer is on the loose in Manhattan and killing innocent people. But even the
-                            deadliest assassin in the Marvel Universe is at somewhat of a loss, because this killer can
-                            be in more than one place at one time. A team? A mutant? Or something else entirely? Whoever
-                            or whatever they are, they have a thirst for blood, and Elektra will put herself directly in
-                            their sights! PLUS: Matt Murdock faces challenges of his own in prison after being exposed
-                            to a dangerous and experimental compound called RE-CID that makes those subjected to it more
-                            aggressive and violent. Whatever happens, one thing is certain — Daredevil isn't getting
-                            time off for good behavior</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Daredevil (2019) #36</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/d2.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">FINAL ISSUE! After a romance that's blossomed over the last two years in
-                            DAREDEVIL, MAYOR WILSON FISK and TYPHOID MARY are prepared to tie the knot! But in a fashion
-                            truly befitting The House of Ideas, calamity is right around the corner for the happy
-                            couple! But what sort of terrible discovery could be so monumental as to derail the most
-                            powerful man in New York's special day? The answer lies in this oversized special issue - if
-                            you get no other DAREDEVIL issue this year, YOU MUST GET THIS ONE!</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Daredevil (2019) #23</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/d3.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">Matt Murdock, A.K.A. DAREDEVIL, has been putting his life back together
-                            after the monumental first year of Chip Zdarsky and Marco Checchetto's run - but the
-                            criminals of Hell's Kitchen aren't inclined to give him any more time to heal. Criminals
-                            aren't all Matt will have to contend with on the road ahead, as the likes of TYPHOID MARY
-                            and BULLSEYE have made their presence known once more. To say nothing of ELEKTRA, and her
-                            designs for The Kitchen, the city and the world…</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Man Without Fear (2019) #3</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/d4.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">Daredevil is gone, but Hell’s Kitchen is still a place of heroes and
-                            villains. The many loves of Matt Murdock will all learn what it means to live in a world
-                            without a Daredevil. And without a Daredevil to protect it, has hell come for his city? Who
-                            is The Man Without Fear?!
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Daredevil (2019) #1</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/d5.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">Know fear.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Iron Man Annual (2021) #1</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/im1.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">IRON MAN VERSUS QUANTUM! When Iron Man learns about the strange people who
-                            kidnapped and tortured Miles Morales, he HAS to look into it. What he finds out about the
-                            Assessor and especially Quantum will shock him and you! Don't miss this in depth look at
-                            some of the coolest new villains and the groundwork laid for major future Marvel stories!
-                            ALSO IN THIS ISSUE: Part 1 (of 8) of ""Super-Spy vs. Super-Spy""- Nick Fury is Agent of
-                            Nothing and Phil Coulson is Agent of Mephisto. For the first time since Coulson came back
-                            from the dead, these two brothers-in-arms will face off.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Tony Stark: Iron Man (2018) #15</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/im2.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">Reality is in the eye of the beholder, as Tony Stark questions his
-                            humanity… while Jocasta is making the choice to leave her robotic body behind and upgrade to
-                            biological parts. A turning point is coming to the Marvel Universe as robotic and A.I.
-                            rights are being threatened in America. Guest starring the Vision. And featuring the return
-                            of one of the Avengers greatest threats!</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-13" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Tony Stark: Iron Man (2018) #13</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/im3.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">WAR OF THE REALMS TIE-IN! HOW TO FIGHT YOUR DRAGON! The concluding chapter
-                            to this special WAR OF THE REALMS story, as Iron Man finds himself struggling against the
-                            ancient mystical forces he has the LEAST power to resist. Tony fights an ancient winged
-                            calamity AND his own technology with the lives of everyone at STARK UNLIMITED hanging in the
-                            balance!</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-14" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Tony Stark: Iron Man (2018) #2</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/im4.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">Tony has been holding back an enormous secret since his return, and
-                            there's only one person on Earth he'd trust it with: James Rhodes. This will change
-                            everything. A strange new development for Jocasta, the return of the Gauntlet and the
-                            arrival of Tony Stark's new rival, Sunset Bain. All this and the power of the Manticore, the
-                            most powerful assault vehicle in the Marvel Universe!
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-15" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Iron Man (2020) #14</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/im5.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">BEHOLD THE BIRTH OF COSMIC IRON MAN! Iron Man has tasted a higher power
-                            and is forever changed. Moments before, he was locked in mortal combat with his worst
-                            adversary in years - KORVAC - but now he finds his very existence altered beyond
-                            recognition. Indeed, fundamental concepts like space and time have taken on a new meaning.
-                            But what does this portend for Tony Stark, a man who even when stripped bare feels he knows
-                            best? What happens when his ego - often challenged, condemned and even derided by both foes
-                            and friends - is suddenly given a limitless avenue? It could certainly mean radical and
-                            drastic change for the entire universe…and reality itself.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-16" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">
-                            Batman: The Killing Joke - The Deluxe Edition</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/bm1.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">Alan Moore cemented his reputation for unparalleled storytelling with
-                            wildly acclaimed books such as WATCHMEN and V FOR VENDETTA. Here he takes on some of DC's
-                            most classic characters, offering his unforgettable version of the disturbing relationship
-                            between the Dark Knight and his greatest foe, the Joker.
-                            In this groundbreaking work, Moore creates a twisted tale of insanity and human
-                            perseverance. Looking to prove that any man can be pushed past his breaking point to
-                            madness, the Joker attempts to drive Commissioner Gordon insane. Refusing to give up, Gordon
-                            struggles to maintain his sanity with the help of Batman in a desperate effort to best the
-                            madman.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-17" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Batman: Earth One</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/bm2.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">The spectacular original graphic novel by writer Geoff Johns and artist
-                            Gary Frank, the acclaimed team behind SUPERMAN: SECRET ORIGIN and the SHAZAM! stories in
-                            JUSTICE LEAGUE! In the tradition of SUPERMAN: EARTH ONE, this tale gives new insight into
-                            Bruce Wayne’s first year as THE DARK KNIGHT. In this all-new take on the Batman mythos,
-                            Bruce Wayne is on the hunt for his parents’ killer. His target? The Mayor of Gotham City!
-                            Plus, who is Alfred Pennyworth – and why is he so determined to put an end to the Batman?
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-18" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Batman: Hush (Dc Essential Edition)</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/bm3.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">In this classic tale, Batman sets out to learn the identity of the
-                            mysterious villain known as Hush. But Batman ends up facing the most intense case of his
-                            life as secrets from his past flood into the present! Guest-starring the Dark Knight’s
-                            greatest allies and enemies, this collection presents BATMAN #608-619, a six-page story from
-                            Wizard #0 and a two-page origin story that originally appeared at dccomics.com in a new
-                            paperback edition with a new cover by superstar artist Jim Lee!</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-19" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">The Dark Knight Returns 30th Anniversary Edition
-                        </h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/bm4.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">It’s the thirtieth anniversary of THE DARK KNIGHT RETURNS, and now DC
-                            Comics presents this classic title in a newly redesigned edition! Ten years after an aging
-                            Batman retired, Gotham City has sunk deeper into decadence and lawlessness. Now, when his
-                            city needs him most, the Dark Knight returns in a blaze of glory. Joined by Carrie Kelly, a
-                            teenaged Robin, Batman takes to the streets to end the threat of the mutant gangs that have
-                            overrun the city. And after facing off against his two greatest enemies, the Joker and
-                            Two-Face, for the final time, Batman finds himself in mortal combat with his former ally,
-                            Superman. The original 4-issue miniseries is presented here in its entirety. </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-20" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Batman: The Court Of Owls Saga: (Dc Essential
-                            Edition)</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/bm5.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">The DC Essential Edition series of graphic novels highlights the best
-                            standalone stories the medium has to offer, featuring comics’ greatest characters. Hidden
-                            for years, the mysterious Court of Owls surfaces in Gotham City—what must Batman do to
-                            defeat them, and what deadly connection do they have to his past? Scott Snyder and Greg
-                            Capullo’s masterpiece epic is collected in its entirety in trade paperback for the first
-                            time ever! Collects issues #1-11 of BATMAN as well as bonus material including sketches,
-                            scripts, design concepts and variant covers.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-21" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Flashpoint</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/f1.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">The red-hot, sold-out five-issue miniseries from Geoff Johns and Andy
-                            Kubert is on its way in trade paperback! This is Flash Fact: When Barry Allen wakes at his
-                            desk, he discovers the world has changed. Family is alive, loved ones are strangers, and
-                            close friends are different, gone or worse. It's a world on the brink of a cataclysmic war –
-                            but where are Earth's Greatest Heroes to stop it? It's a place where America's last hope is
-                            Cyborg, who hopes to gather the forces of The Outsider, The Secret 7, S!H!A!Z!A!M!, Citizen
-                            Cold and other new and familiar-yet-altered faces! It's a world that could be running out of
-                            time, if The Flash can't find the villain who altered the time line!
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-22" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">The Flash: Rebirth</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/f2.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">Geoff Johns and Ethan Van Sciver, the writer/artist team behind the
-                            blockbuster GREEN LANTERN: REBIRTH and THE SINESTRO CORPS WAR, create an explosive,
-                            jaw-dropping epic that reintroduces Barry Allen as The Flash in this new collection of the
-                            fast-paced 6-issue miniseries. But how will this greatest of all Flashes find his place in
-                            the 21st century?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-23" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">The Flash: Starting Line (Dc Essential Edition)
-                        </h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/f3.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">In this new DC Essential Edition, Mob Rule wages a campaign of crime
-                            across Central City, plunging the city into darkness! The only way the Flash can save his
-                            city is to make his brain function even faster than before—but as much as it helps him, it
-                            also comes at a steep price. Then, it’s an all-out battle against the Rogues! Collects THE
-                            FLASH #0-12 and ANNUAL #1.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-24" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">The Flash Vol. 2: Speed Of Darkness</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/f4.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">A storm is brewing over Central City. Just as Barry begins to feel
-                            overwhelmed fighting crime, a new speedster appears—but just where did this amazing new
-                            friend come from? Spinning out of the events of DC UNIVERSE: REBIRTH #1, the Fastest Man
-                            Alive finds himself at a crossroads. Collects issues #9-13.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modal-25" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">The Flash Vol. 1: Lightning Strikes Twice</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="../img/comics/f5.jpg" class="img-fluid  text-center" alt="">
-                        </div>
-                        <p class="modal-text">A new storm brews over Central City and disproves the old adage about
-                            lightning never striking twice! Just as Barry begins to feel overwhelmed fighting crime, a
-                            new speedster appears—but just where did this amazing new ally come from? Now, the Fastest
-                            Man Alive finds himself in a city of speedsters—and dealing with the reappearance of Wally
-                            West! Collects THE FLASH: REBIRTH #1 plus issues #1-8 of the new series.
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </div>
 
     <!-- MDB -->
