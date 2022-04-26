@@ -147,7 +147,6 @@ const btnAccion = (e) => {
         const producto = carrito[e.target.dataset.id]
         producto.quantity++
         carrito[e.target.dataset.id] = { ...producto }
-        console.log(carrito[e.target.dataset.id])
         pintarCarrito()
     } else if (e.target.classList.contains('btn-danger')) {
         const producto = carrito[e.target.dataset.id]
