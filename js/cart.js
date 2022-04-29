@@ -73,9 +73,8 @@ const pintarModals = data => {
 // Acción click en botón comprar
 
 const addCarrito = e => {
-    if (e.target.classList.contains('btn-2')) {
-        setCarrito(e.target.parentElement)
-    }
+    // operador lógico AND
+    e.target.classList.contains('btn-2') && setCarrito(e.target.parentElement)
     e.stopPropagation() // detiene cualquier otro evento que pueda generarse en nuestros items (que provengan del padre)
 }
 
@@ -151,9 +150,8 @@ const btnAccion = (e) => {
     } else if (e.target.classList.contains('btn-danger')) {
         const producto = carrito[e.target.dataset.id]
         producto.quantity--
-        if (producto.quantity === 0) {
-            delete carrito[e.target.dataset.id]
-        }
+        // operador AND
+        producto.quantity === 0 && delete carrito[e.target.dataset.id] 
         pintarCarrito()
     }
 
