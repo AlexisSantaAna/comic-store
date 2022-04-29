@@ -74,7 +74,7 @@ const pintarModals = data => {
 
 const addCarrito = e => {
     // operador lógico AND
-    e.target.classList.contains('btn-2') && setCarrito(e.target.parentElement)
+    e.target.classList.contains('btn-2') && setCarrito(e.target.parentElement)   
     e.stopPropagation() // detiene cualquier otro evento que pueda generarse en nuestros items (que provengan del padre)
 }
 
@@ -92,6 +92,21 @@ const setCarrito = objeto => {
     }
 
     carrito[producto.id] = { ...producto }
+
+    // Toastify
+    const selectedComic = objeto.querySelector('h5').textContent
+    Toastify({
+        text: `${selectedComic}\nADDED TO CART!`,
+        duration: 2400,
+        gravity: "bottom", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "linear-gradient(to right, #ba0101, #e64949)",
+        },
+        onClick: function () { } // Callback after click
+    }).showToast();
+
     pintarCarrito()
 }
 
@@ -151,7 +166,7 @@ const btnAccion = (e) => {
         const producto = carrito[e.target.dataset.id]
         producto.quantity--
         // operador AND
-        producto.quantity === 0 && delete carrito[e.target.dataset.id] 
+        producto.quantity === 0 && delete carrito[e.target.dataset.id]
         pintarCarrito()
     }
 
