@@ -77,6 +77,13 @@ header ul li:hover {
     color: var(--main-white);
 }
 
+#total-cart {
+    background-color: var(--main-red);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 100%;
+}
+
 /* HEADER */
 
 header {

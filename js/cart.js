@@ -74,7 +74,7 @@ const pintarModals = data => {
 
 const addCarrito = e => {
     // operador lógico AND
-    e.target.classList.contains('btn-2') && setCarrito(e.target.parentElement)   
+    e.target.classList.contains('btn-2') && setCarrito(e.target.parentElement)
     e.stopPropagation() // detiene cualquier otro evento que pueda generarse en nuestros items (que provengan del padre)
 }
 
@@ -128,6 +128,17 @@ const pintarCarrito = () => {
     pintarFooter()
 
     localStorage.setItem('carrito', JSON.stringify(carrito))
+
+    //Probando...
+    if (document.getElementById('quantity-total') == null) {
+        let totalItems = 0
+        localStorage.setItem('carritoTotal', totalItems)
+        document.getElementById('total-cart').textContent = totalItems
+    } else {
+        totalItems = document.getElementById('quantity-total').textContent
+        localStorage.setItem('carritoTotal', totalItems)
+        document.getElementById('total-cart').textContent = totalItems         
+    }
 }
 
 const pintarFooter = () => {
