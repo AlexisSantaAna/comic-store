@@ -137,11 +137,6 @@ header {
     color: var(--main-white);
 }
 
-.btn-4:hover {
-    background: var(--main-green);
-    color: var(--main-white);
-}
-
 .btn-5:hover {
     background: var(--main-blue);
     color: var(--main-white);
@@ -189,8 +184,8 @@ footer ul li a:hover {
 }
 
 .comics-title {
-    margin-top: 8rem;
-    margin-bottom: 4rem;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
     padding-left: 1rem;
 }
 
@@ -319,7 +314,6 @@ h5 {
     padding-bottom: 4rem;
     padding-left: 1rem;
 }
-
 /* media querys */
 
 @media (max-width: 992px) {
@@ -377,5 +371,13 @@ h5 {
 @media (max-width: 575px) {
     .container {
         padding: 0 20px 0 20px;
+    }
+    .table {
+        font-size: 13px;
+    }
+    .comics-title,
+    .cart-title {
+        padding-top: 6.8rem;
+        padding-bottom: 3rem;
     }
 }
