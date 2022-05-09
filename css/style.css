@@ -183,6 +183,11 @@ footer ul li a:hover {
     padding: 0;
 }
 
+.form-select {
+    width: 10rem;
+    margin-bottom: 1rem;
+}
+
 .comics-title {
     padding-top: 8rem;
     padding-bottom: 4rem;
