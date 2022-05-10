@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <!-- Toastify -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <style id="style"></style>
 </head>
 
 <body>
@@ -61,7 +62,7 @@
     <main>
         <div class="container main-container">
             <h2 class="comics-title">COMICS ON SALE</h2>
-            <select class="form-select btn-outline-dark" aria-label="Default select example">
+            <select id="select" class="form-select btn-outline-dark" aria-label="Default select example" onchange="selectValue()">
                 <option value="show-all" selected>Show all</option>
                 <option value="spiderman">Spiderman</option>
                 <option value="daredevil">Daredevil</option>
@@ -97,7 +98,7 @@
 
             <!-- Templates -->
             <template id="template-card">
-                <div class="col-sm-4 d-flex flex-column">
+                <div>
                     <img src="" class="img-fluid comic" alt="" data-mdb-toggle="modal" data-mdb-target="">
                     <h5></h5>
                     <p>$<span></span></p>
@@ -176,6 +177,7 @@
     <script type="text/javascript" src="../js/mdb.min.js"></script>
     <!-- Custom scripts -->
     <script src="../js/cart.js"></script>
+    <script src="../js/filterComics.js"></script>
     <!-- Toastify -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <!-- <script src="../js/comics.js"></script> Entregable Eventos -->

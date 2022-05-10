@@ -181,11 +181,16 @@ footer ul li a:hover {
 
 .main-container {
     padding: 0;
+    min-height: 100vh   ;
 }
 
 .form-select {
     width: 10rem;
     margin-bottom: 1rem;
+}
+
+.form-select:focus {
+    border-color: var(--main-background);
 }
 
 .comics-title {

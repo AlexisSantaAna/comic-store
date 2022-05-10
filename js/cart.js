@@ -1,5 +1,3 @@
-// template items //
-
 // items arriba de todo
 const items = document.getElementById('items')
 const products = document.getElementById('products')
@@ -47,6 +45,7 @@ products.addEventListener('click', e => {
 
 const pintarCards = data => {
     data.forEach(item => {
+        templateCard.querySelector('div').setAttribute('class', `col-sm-4 d-flex flex-column ${item.category}`)
         templateCard.querySelector('h5').textContent = item.title
         templateCard.querySelector('span').textContent = item.price
         templateCard.querySelector('img').setAttribute('src', item.thumbnailUrl)
@@ -56,6 +55,7 @@ const pintarCards = data => {
         fragment.appendChild(clone)
     })
     items.appendChild(fragment)
+
 }
 
 const pintarModals = data => {
@@ -137,7 +137,7 @@ const pintarCarrito = () => {
     } else {
         totalItems = document.getElementById('quantity-total').textContent
         localStorage.setItem('carritoTotal', totalItems)
-        document.getElementById('total-cart').textContent = totalItems         
+        document.getElementById('total-cart').textContent = totalItems
     }
 }
 
