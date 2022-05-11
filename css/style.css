@@ -142,6 +142,21 @@ header {
     color: var(--main-white);
 }
 
+.btn-info:hover {
+    background-color: rgb(75, 75, 247);
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: rgb(208, 0, 0);
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: rgb(1, 102, 1);
+    color: white;
+}
+
 /* FOOTER */
 
 footer {

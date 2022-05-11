@@ -161,9 +161,21 @@ const pintarFooter = () => {
     footer.appendChild(fragment)
 
     const btnVaciar = document.getElementById('vaciar-carrito')
+    const btnComprar = document.getElementById('finalizar-compra')
+    const comprarModal = document.getElementById('purchase-modal-text')
     btnVaciar.addEventListener('click', () => {
         carrito = {}
         pintarCarrito()
+    })
+    btnComprar.addEventListener('click', () => {
+        carrito = {}
+        pintarCarrito()
+        comprarModal.innerHTML = `<p style="font-size: 1.5rem">
+        Purchase made successfully!<br><br>
+        
+        Total cost: $${nPrecio}
+        </p>
+        `
     })
 }
 

@@ -46,7 +46,8 @@
                             <a class="nav-link asdf" href="contact.html">CONTACT</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link asdf" href="cart.html"><i class="fas fa-shopping-cart"></i><sup id="total-cart"> 0</sup></a>
+                            <a class="nav-link asdf" href="cart.html"><i class="fas fa-shopping-cart"></i><sup
+                                    id="total-cart"> 0</sup></a>
                         </li>
                     </ul>
                 </div>
@@ -94,7 +95,8 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel"></h5>
-                            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="text-center">
@@ -103,7 +105,8 @@
                             <p class="modal-text"></p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-3 btn-outline-dark"
+                                data-mdb-dismiss="modal">Close</button>
                             <button type="button" class="btn btn-4 btn-outline-dark">Add to cart</button>
                         </div>
                     </div>
@@ -113,8 +116,12 @@
 
         <template id="template-footer">
             <th scope="row" colspan="2">Total products</th>
-            <td id="quantity-total"> 0</td> 
+            <td id="quantity-total"> 0</td>
             <td>
+                <button class="btn btn-success btn-sm" id="finalizar-compra" data-mdb-toggle="modal"
+                    data-mdb-target="#exampleModal">
+                    Purchase
+                </button>
                 <button class="btn btn-danger btn-sm" id="vaciar-carrito">
                     Clean
                 </button>
@@ -144,7 +151,7 @@
 
             </div>
 
-            
+
     </main>
     <!-- footer -->
     <footer class="text-center text-lg-start align-items-center justify-content-center">
@@ -154,6 +161,20 @@
                 Ana</a>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">                
+                <div class="modal-body" id="purchase-modal-text">
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-3 btn-outline-dark" data-mdb-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- MDB -->
     <script type="text/javascript" src="../js/mdb.min.js"></script>
